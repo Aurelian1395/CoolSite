@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.mainContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eceff1;
+  border-radius: 6px;
+  padding: 50px;
+  box-shadow: 1px 3px 10px 2px #607d8b;
+
+}
+
+.password,.username,.input{
+  margin-bottom: 10px;
+}
