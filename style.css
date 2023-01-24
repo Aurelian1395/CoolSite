@@ -27,3 +27,14 @@ body {
 .password,.username,.input{
   margin-bottom: 10px;
 }
+.signIn{
+  font-weight: bold;
+  color: white;
+  background-color: #607d8b;
+  border-color: #607d8b;
+  border-radius: 6px;
+}
+
+span{
+  color: red;
+}
