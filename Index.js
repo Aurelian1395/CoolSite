@@ -19,8 +19,28 @@ function setPassword(e) {
 
 
 function submit() {
-  document.getElementById('valore').innerHTML = password
+
+  var password = document.getElementById('password').value;
+  var username = document.getElementById('username').value;
+
+
+  password = true
+  username = true
+
+  if (password & username == true) {
+    console.log('Hi Piccolo Drago Meteora')
+  }
+  else {
+    alert('Non si può mo zio bon')
+  };
+
+
+
+
+
+
 }
+
 
 
 // ======================================================
@@ -38,7 +58,7 @@ console.log('0 prima del fetch');
 // http è il protocollo utilizzato, di solito per la richiesta di dati, https è quello "sicuro"
 // 127.0.0.1 signifca che stai interrogando l'ip della tua stessa macchina
 // il 3000 è la porta alla quale la istanza mette a disposizione la comunicazione
-fetch('http://127.0.0.1:3000')
+fetch('http://127.0.0.1:3000/')
   // Uso questo then per formattare la risposta del server in un dato leggibile
   //https://developer.mozilla.org/en-US/docs/Web/API/Response/json
   .then(function (response) {
@@ -60,4 +80,3 @@ fetch('http://127.0.0.1:3000')
 // Questa console verrà eseguita subito, quando il fetch avrà ricevuto i dati farà il console.log nel then
 // Te l'ho messo per farti capire l'ordine con cui funzionano 
 console.log('1 dopo il fetch')
-
