@@ -24,17 +24,18 @@ function submit() {
   var username = document.getElementById('username').value;
 
 
-  password = true
-  username = true
+if((username == "")||(username== undefined) ) {
+  alert("Devi inserire un username");
+ 
 
-  if (password & username == true) {
-    console.log('Hi Piccolo Drago Meteora')
-  }
-  else {
-    alert('Non si può mo zio bon')
-  };
+} 
+if((password== "") || (password)== undefined){
+  alert( "devi inserire una password corretta")
+}
 
-
+else{
+  alert( "tutti i campi sono compilati correttamente")
+}
 
 
 
