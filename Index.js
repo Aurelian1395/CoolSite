@@ -16,19 +16,7 @@ let password = "";
 function setPassword(e) {
   password = e.target.value;
 }
-// Chiamata al server
 
-async function postData(url = "", data = {}) {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-
-  return response;
-}
 
 function submit() {
   var password = document.getElementById("password").value;
@@ -47,6 +35,7 @@ function submit() {
     return;
   }
 
+
   postData("http://localhost:3000/login", credenziali)
     .then((response) => {
       if (!response.ok) {
@@ -58,4 +47,19 @@ function submit() {
       console.log("Success");
       console.log(data);
     });
+    
+}
+
+// Chiamata al server
+
+async function postData(url = "", data = {}) {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return response;
 }
