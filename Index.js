@@ -17,6 +17,11 @@ function setPassword(e) {
   password = e.target.value;
 }
 
+function saluta(nome) {
+  console.log(`Ciao, ${nome}!`);
+}
+
+
 
 function submit() {
   var password = document.getElementById("password").value;
@@ -35,8 +40,10 @@ function submit() {
     return;
   }
 
-
-  postData("http://localhost:3000/login", credenziali)
+  document.getElementById('card').style.display= "none";
+  document.getElementById('loaderFather').style.display= "flex";
+  
+ postData("http://localhost:3000/login", credenziali)
     .then((response) => {
       if (!response.ok) {
         return Promise.reject(response);
@@ -48,7 +55,16 @@ function submit() {
       console.log(data);
     });
     
+
+    
+
 }
+
+
+
+
+
+
 
 // Chiamata al server
 
